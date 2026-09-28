@@ -1,0 +1,4812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        How Devices Are Discovered, Tracked, and Refreshed
+    </title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="nav-left-area">
+            <button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="/index.html">BrightScript VSCode Extension</a>
+        </div>
+        <a href="https://github.com/rokucommunity/vscode-brightscript-language" target="_blank" title="View project on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" style="fill: white" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+        </a>
+    </div>
+    <div id="body-area">
+        <div id="sidebar">
+
+            
+            
+            <div class="folder">
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="index.html">Introduction</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="features.html">Features</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="installation.html">How to Install</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="extension-settings.html">Extension Settings</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="keyboard-shortcuts.html">Keyboard shortcuts</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="brightscript-tasks.html">BrightScript Tasks</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="Debugging">Debugging</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/index.html">Setup</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/advanced-project-setup.html">Advanced Project Setup</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/bs-const.html">bs_const</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/component-libraries.html">Component Libraries</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/deep-linking.html">Deep Linking (ECP)</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/env-file.html">.env file</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/rale.html">RALE Support</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/remote-control-mode.html">Remote Control Mode</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Debugging/source-maps.html">SourceMaps</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="device-discovery.html">How Devices Are Discovered, Tracked, and Refreshed</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="Editing">Editing</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Editing/index.html">Setup</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Editing/code-formatting.html">Code formatting</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Editing/error-handling.html">Ignoring Errors and Warnings</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Editing/snippets.html">Snippets</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="Editing/word-separators.html">Editor word separator</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@compodoc">@compodoc</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@compodoc/live-server">live-server</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@compodoc/live-server/injected.html">injected</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@compodoc/live-server/README.html">README</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@compodoc/live-server/test">test</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@compodoc/live-server/test/data">data</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@compodoc/live-server/test/data/fragment.html">fragment</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@compodoc/live-server/test/data/index-head.html">index head</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@compodoc/live-server/test/data/index.html">index</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@compodoc/live-server/test/data/sub">sub</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@compodoc/live-server/test/data/sub/sub.html">sub</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@nodelib">@nodelib</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@nodelib/fs.scandir">fs.scandir</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@nodelib/fs.scandir/README.html">@nodelib/fs.scandir</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@nodelib/fs.stat">fs.stat</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@nodelib/fs.stat/README.html">@nodelib/fs.stat</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@nodelib/fs.walk">fs.walk</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@nodelib/fs.walk/README.html">@nodelib/fs.walk</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@parcel">@parcel</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@parcel/watcher">watcher</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@parcel/watcher/README.html">@parcel/watcher</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@parcel/watcher-linux-x64-glibc">watcher-linux-x64-glibc</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@parcel/watcher-linux-x64-glibc/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/@parcel/watcher-linux-x64-musl">watcher-linux-x64-musl</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/@parcel/watcher-linux-x64-musl/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/accepts">accepts</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/accepts/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/accepts/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/accepts/node_modules/mime-db">mime-db</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/accepts/node_modules/mime-db/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/accepts/node_modules/mime-db/README.html">mime-db</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/accepts/node_modules/mime-types">mime-types</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/accepts/node_modules/mime-types/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/accepts/node_modules/mime-types/README.html">mime-types</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/accepts/README.html">accepts</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/acorn">acorn</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/acorn/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/acorn/README.html">Acorn</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/acorn-node">acorn-node</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/acorn-node/CHANGELOG.html">acorn-node change log</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/acorn-node/LICENSE.html">[Apache License 2.0](https://spdx.org/licenses/Apache-2.0)</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/acorn-node/README.html">acorn-node</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/acorn-walk">acorn-walk</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/acorn-walk/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/acorn-walk/README.html">Acorn AST walker</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ansi-regex">ansi-regex</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ansi-regex/readme.html">ansi-regex</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ansi-styles">ansi-styles</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ansi-styles/readme.html">ansi-styles [![Build Status](https://travis-ci.org/chalk/ansi-styles.svg?branch=master)](https://travis-ci.org/chalk/ansi-styles)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/anymatch">anymatch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/anymatch/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/anymatch/node_modules/picomatch">picomatch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/anymatch/node_modules/picomatch/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/anymatch/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/apache-crypt">apache-crypt</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/apache-crypt/README.html">apache-crypt</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/apache-md5">apache-md5</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/apache-md5/README.html">apache-md5</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/argparse">argparse</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/argparse/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/argparse/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/array-union">array-union</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/array-union/readme.html">array-union [![Build Status](https://travis-ci.org/sindresorhus/array-union.svg?branch=master)](https://travis-ci.org/sindresorhus/array-union)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/async">async</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/async/CHANGELOG.html">v3.2.5</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/async/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/balanced-match">balanced-match</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/balanced-match/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/balanced-match/README.html">balanced-match</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/basic-auth">basic-auth</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/basic-auth/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/basic-auth/README.html">basic-auth</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/batch">batch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/batch/History.html">History</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/batch/Readme.html">batch</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/bcryptjs">bcryptjs</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/bcryptjs/dist">dist</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/bcryptjs/dist/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/bcryptjs/README.html">README</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/bcryptjs/src">src</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/bcryptjs/src/bcrypt">bcrypt</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/bcryptjs/src/bcrypt/prng">prng</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/bcryptjs/src/bcrypt/prng/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/binary-extensions">binary-extensions</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/binary-extensions/readme.html">binary-extensions</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/brace-expansion">brace-expansion</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/brace-expansion/README.html">brace-expansion</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/braces">braces</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/braces/README.html">braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/npm/v/braces.svg?style=flat)](https://www.npmjs.com/package/braces) [![NPM monthly downloads](https://img.shields.io/npm/dm/braces.svg?style=flat)](https://npmjs.org/package/braces) [![NPM total downloads](https://img.shields.io/npm/dt/braces.svg?style=flat)](https://npmjs.org/package/braces) [![Linux Build Status](https://img.shields.io/travis/micromatch/braces.svg?style=flat&amp;label=Travis)](https://travis-ci.org/micromatch/braces)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/chalk">chalk</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/chalk/readme.html">readme</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/chokidar">chokidar</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/chokidar/README.html">Chokidar [![Weekly downloads](https://img.shields.io/npm/dw/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Yearly downloads](https://img.shields.io/npm/dy/chokidar.svg)](https://github.com/paulmillr/chokidar)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/cliui">cliui</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/cliui/CHANGELOG.html">Change Log</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/cliui/README.html">cliui</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/color-convert">color-convert</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/color-convert/CHANGELOG.html">1.0.0 - 2016-01-07</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/color-convert/README.html">color-convert</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/color-name">color-name</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/color-name/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/colors">colors</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/colors/README.html">colors.js</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/connect">connect</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/connect/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/connect/README.html">README</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/connect/SECURITY.html">Security Policies and Procedures</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/cors">cors</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/cors/README.html">cors</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/debounce">debounce</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/debounce/History.html">History</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/debounce/Readme.html">debounce</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/debounce/test.html">test</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/debug">debug</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/debug/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/debug/README.html">debug</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/define-lazy-prop">define-lazy-prop</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/define-lazy-prop/readme.html">define-lazy-prop [![Build Status](https://travis-ci.org/sindresorhus/define-lazy-prop.svg?branch=master)](https://travis-ci.org/sindresorhus/define-lazy-prop)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/depd">depd</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/depd/History.html">History</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/depd/Readme.html">depd</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/detect-libc">detect-libc</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/detect-libc/README.html">detect-libc</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/dir-glob">dir-glob</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/dir-glob/readme.html">dir-glob [![Build Status](https://travis-ci.org/kevva/dir-glob.svg?branch=master)](https://travis-ci.org/kevva/dir-glob)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/duplexer">duplexer</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/duplexer/README.html">duplexer</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ee-first">ee-first</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ee-first/README.html">EE First</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs">ejs</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs-include-regex">ejs-include-regex</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-include-regex/README.html">ejs-include-regex</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs-lint">ejs-lint</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs-lint/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs-lint/node_modules/cliui">cliui</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/node_modules/cliui/CHANGELOG.html">Change Log</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/node_modules/cliui/README.html">cliui</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs-lint/node_modules/ejs">ejs</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/node_modules/ejs/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs-lint/node_modules/yargs">yargs</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/node_modules/yargs/CHANGELOG.html">Changelog</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/node_modules/yargs/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ejs-lint/node_modules/yargs-parser">yargs-parser</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/node_modules/yargs-parser/CHANGELOG.html">Changelog</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/node_modules/yargs-parser/README.html">yargs-parser</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ejs-lint/README.html">EJS-Lint</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/emoji-regex">emoji-regex</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/emoji-regex/README.html">emoji-regex [![Build status](https://travis-ci.org/mathiasbynens/emoji-regex.svg?branch=master)](https://travis-ci.org/mathiasbynens/emoji-regex)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/empty-dir">empty-dir</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/empty-dir/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/encodeurl">encodeurl</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/encodeurl/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/encodeurl/README.html">encodeurl</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/escalade">escalade</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/escalade/readme.html">escalade [![CI](https://github.com/lukeed/escalade/workflows/CI/badge.svg)](https://github.com/lukeed/escalade/actions) [![licenses](https://licenses.dev/b/npm/escalade)](https://licenses.dev/npm/escalade) [![codecov](https://badgen.now.sh/codecov/c/github/lukeed/escalade)](https://codecov.io/gh/lukeed/escalade)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/escape-html">escape-html</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/escape-html/Readme.html">escape-html</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/esprima">esprima</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/esprima/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/etag">etag</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/etag/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/etag/README.html">etag</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/fast-glob">fast-glob</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/fast-glob/README.html">fast-glob</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/fastq">fastq</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/fastq/README.html">fastq</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/fastq/SECURITY.html">Security Policy</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/faye-websocket">faye-websocket</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/faye-websocket/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/faye-websocket/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/faye-websocket/README.html">faye-websocket</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/filelist">filelist</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/filelist/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/fill-range">fill-range</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/fill-range/README.html">fill-range [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/npm/v/fill-range.svg?style=flat)](https://www.npmjs.com/package/fill-range) [![NPM monthly downloads](https://img.shields.io/npm/dm/fill-range.svg?style=flat)](https://npmjs.org/package/fill-range) [![NPM total downloads](https://img.shields.io/npm/dt/fill-range.svg?style=flat)](https://npmjs.org/package/fill-range) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/fill-range.svg?style=flat&amp;label=Travis)](https://travis-ci.org/jonschlinkert/fill-range)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/finalhandler">finalhandler</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/finalhandler/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/finalhandler/README.html">finalhandler</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/fresh">fresh</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/fresh/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/fresh/README.html">fresh</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/front-matter">front-matter</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/front-matter/README.html">front-matter</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/fs-extra">fs-extra</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/fs-extra/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/get-caller-file">get-caller-file</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/get-caller-file/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/get-caller-file/README.html">get-caller-file</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/glob-parent">glob-parent</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/glob-parent/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/glob-parent/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/globby">globby</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/globby/readme.html">globby</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/graceful-fs">graceful-fs</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/graceful-fs/README.html">graceful-fs</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/has-flag">has-flag</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/has-flag/readme.html">has-flag [![Build Status](https://travis-ci.org/sindresorhus/has-flag.svg?branch=master)](https://travis-ci.org/sindresorhus/has-flag)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/http-auth">http-auth</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-auth/README.html">http-auth</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/http-auth-connect">http-auth-connect</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-auth-connect/README.html">http-auth-connect</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/http-errors">http-errors</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-errors/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/http-errors/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/http-errors/node_modules/statuses">statuses</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-errors/node_modules/statuses/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-errors/node_modules/statuses/README.html">statuses</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-errors/README.html">http-errors</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/http-parser-js">http-parser-js</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-parser-js/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/http-parser-js/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ignore">ignore</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ignore/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/inherits">inherits</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/inherits/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/is-binary-path">is-binary-path</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/is-binary-path/readme.html">is-binary-path [![Build Status](https://travis-ci.org/sindresorhus/is-binary-path.svg?branch=master)](https://travis-ci.org/sindresorhus/is-binary-path)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/is-docker">is-docker</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/is-docker/readme.html">is-docker</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/is-extglob">is-extglob</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/is-extglob/README.html">is-extglob [![NPM version](https://img.shields.io/npm/v/is-extglob.svg?style=flat)](https://www.npmjs.com/package/is-extglob) [![NPM downloads](https://img.shields.io/npm/dm/is-extglob.svg?style=flat)](https://npmjs.org/package/is-extglob) [![Build Status](https://img.shields.io/travis/jonschlinkert/is-extglob.svg?style=flat)](https://travis-ci.org/jonschlinkert/is-extglob)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/is-fullwidth-code-point">is-fullwidth-code-point</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/is-fullwidth-code-point/readme.html">is-fullwidth-code-point [![Build Status](https://travis-ci.org/sindresorhus/is-fullwidth-code-point.svg?branch=master)](https://travis-ci.org/sindresorhus/is-fullwidth-code-point)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/is-glob">is-glob</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/is-glob/README.html">is-glob [![NPM version](https://img.shields.io/npm/v/is-glob.svg?style=flat)](https://www.npmjs.com/package/is-glob) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-glob.svg?style=flat)](https://npmjs.org/package/is-glob) [![NPM total downloads](https://img.shields.io/npm/dt/is-glob.svg?style=flat)](https://npmjs.org/package/is-glob) [![Build Status](https://img.shields.io/github/workflow/status/micromatch/is-glob/dev)](https://github.com/micromatch/is-glob/actions)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/is-number">is-number</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/is-number/README.html">is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style=flat)](https://npmjs.org/package/is-number) [![NPM total downloads](https://img.shields.io/npm/dt/is-number.svg?style=flat)](https://npmjs.org/package/is-number) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/is-number.svg?style=flat&amp;label=Travis)](https://travis-ci.org/jonschlinkert/is-number)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/is-wsl">is-wsl</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/is-wsl/readme.html">is-wsl [![Build Status](https://travis-ci.org/sindresorhus/is-wsl.svg?branch=master)](https://travis-ci.org/sindresorhus/is-wsl)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/jake">jake</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/jake/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/js-yaml">js-yaml</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/js-yaml/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/jsonfile">jsonfile</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/jsonfile/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/marked">marked</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/marked/LICENSE.html">License information</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/marked/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/merge2">merge2</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/merge2/README.html">merge2</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/micromatch">micromatch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/micromatch/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/micromatch/node_modules/picomatch">picomatch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/micromatch/node_modules/picomatch/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/micromatch/README.html">micromatch [![NPM version](https://img.shields.io/npm/v/micromatch.svg?style=flat)](https://www.npmjs.com/package/micromatch) [![NPM monthly downloads](https://img.shields.io/npm/dm/micromatch.svg?style=flat)](https://npmjs.org/package/micromatch) [![NPM total downloads](https://img.shields.io/npm/dt/micromatch.svg?style=flat)](https://npmjs.org/package/micromatch)  [![Tests](https://github.com/micromatch/micromatch/actions/workflows/test.yml/badge.svg)](https://github.com/micromatch/micromatch/actions/workflows/test.yml)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/mime-db">mime-db</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/mime-db/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/mime-db/README.html">mime-db</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/mime-types">mime-types</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/mime-types/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/mime-types/README.html">mime-types</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/minimatch">minimatch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/minimatch/changelog.html">change log</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/minimatch/README.html">minimatch</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/moment">moment</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/moment/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/moment/README.html">[Moment.js](http://momentjs.com/)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/morgan">morgan</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/morgan/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/morgan/README.html">morgan</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/ms">ms</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ms/license.html">license</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/ms/readme.html">ms</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/negotiator">negotiator</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/negotiator/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/negotiator/README.html">negotiator</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/node-addon-api">node-addon-api</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/node-addon-api/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/node-addon-api/README.html">README</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/node-addon-api/tools">tools</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/node-addon-api/tools/README.html">Tools</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/normalize-path">normalize-path</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/normalize-path/README.html">normalize-path [![NPM version](https://img.shields.io/npm/v/normalize-path.svg?style=flat)](https://www.npmjs.com/package/normalize-path) [![NPM monthly downloads](https://img.shields.io/npm/dm/normalize-path.svg?style=flat)](https://npmjs.org/package/normalize-path) [![NPM total downloads](https://img.shields.io/npm/dt/normalize-path.svg?style=flat)](https://npmjs.org/package/normalize-path) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/normalize-path.svg?style=flat&amp;label=Travis)](https://travis-ci.org/jonschlinkert/normalize-path)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/object-assign">object-assign</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/object-assign/readme.html">object-assign [![Build Status](https://travis-ci.org/sindresorhus/object-assign.svg?branch=master)](https://travis-ci.org/sindresorhus/object-assign)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/on-finished">on-finished</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/on-finished/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/on-finished/README.html">on-finished</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/on-headers">on-headers</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/on-headers/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/on-headers/README.html">on-headers</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/open">open</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/open/readme.html">open</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/parseurl">parseurl</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/parseurl/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/parseurl/README.html">parseurl</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/path-type">path-type</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/path-type/readme.html">path-type [![Build Status](https://travis-ci.org/sindresorhus/path-type.svg?branch=master)](https://travis-ci.org/sindresorhus/path-type)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/picocolors">picocolors</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/picocolors/README.html">picocolors</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/picomatch">picomatch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/picomatch/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/proxy-middleware">proxy-middleware</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/proxy-middleware/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/queue-microtask">queue-microtask</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/queue-microtask/README.html">queue-microtask [![ci][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/range-parser">range-parser</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/range-parser/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/range-parser/README.html">range-parser</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/read-input">read-input</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/read-input/History.html">History</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/read-input/Readme.html">read-input</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/readdirp">readdirp</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/readdirp/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/readdirp/node_modules/picomatch">picomatch</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/readdirp/node_modules/picomatch/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/readdirp/README.html">readdirp [![Weekly downloads](https://img.shields.io/npm/dw/readdirp.svg)](https://github.com/paulmillr/readdirp)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/reusify">reusify</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/reusify/README.html">reusify</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/reusify/SECURITY.html">Security Policy</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/run-parallel">run-parallel</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/run-parallel/README.html">run-parallel [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/safe-buffer">safe-buffer</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/safe-buffer/README.html">safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/semver">semver</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/semver/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/send">send</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/send/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/send/node_modules/debug">debug</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/debug/README.html">debug</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/send/node_modules/encodeurl">encodeurl</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/encodeurl/README.html">Encode URL</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/send/node_modules/ms">ms</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/ms/license.html">license</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/ms/readme.html">ms</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/send/node_modules/on-finished">on-finished</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/on-finished/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/on-finished/README.html">on-finished</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/send/node_modules/statuses">statuses</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/statuses/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/node_modules/statuses/README.html">statuses</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/send/README.html">send</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/serve-index">serve-index</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/serve-index/node_modules">node_modules</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/serve-index/node_modules/depd">depd</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/depd/History.html">History</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/depd/Readme.html">depd</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/serve-index/node_modules/http-errors">http-errors</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/http-errors/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/http-errors/README.html">http-errors</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/serve-index/node_modules/mime-db">mime-db</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/mime-db/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/mime-db/README.html">mime-db</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/serve-index/node_modules/mime-types">mime-types</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/mime-types/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/node_modules/mime-types/README.html">mime-types</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/serve-index/public">public</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/public/directory.html">directory</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/serve-index/README.html">serve-index</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/setprototypeof">setprototypeof</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/setprototypeof/README.html">Polyfill for `Object.setPrototypeOf`</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/slash">slash</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/slash/readme.html">slash [![Build Status](https://travis-ci.org/sindresorhus/slash.svg?branch=master)](https://travis-ci.org/sindresorhus/slash)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/sprintf-js">sprintf-js</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/sprintf-js/demo">demo</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/sprintf-js/demo/angular.html">angular</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/sprintf-js/README.html">sprintf.js</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/statigen">statigen</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statigen/CHANGELOG.html">Changelog</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statigen/README.html">statigen</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/statigen/templates">templates</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/statigen/templates/default">default</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statigen/templates/default/index.html">Introduction</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statigen/templates/default/adjusting-page-priority.html">Page Priority</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/statigen/templates/default/Getting Started">Getting Started</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statigen/templates/default/Getting Started/index.html">Adding Pages</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/statigen/templates/default/advanced-topics">Advanced Topics</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statigen/templates/default/advanced-topics/index.html">Customizing the template</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/statuses">statuses</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statuses/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/statuses/README.html">Statuses</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/stream-combiner">stream-combiner</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/stream-combiner/README.html">stream-combiner</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/string-width">string-width</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/string-width/readme.html">string-width</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/strip-ansi">strip-ansi</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/strip-ansi/readme.html">strip-ansi [![Build Status](https://travis-ci.org/chalk/strip-ansi.svg?branch=master)](https://travis-ci.org/chalk/strip-ansi)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/supports-color">supports-color</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/supports-color/readme.html">supports-color [![Build Status](https://travis-ci.org/chalk/supports-color.svg?branch=master)](https://travis-ci.org/chalk/supports-color)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/to-regex-range">to-regex-range</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/to-regex-range/README.html">to-regex-range [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/npm/v/to-regex-range.svg?style=flat)](https://www.npmjs.com/package/to-regex-range) [![NPM monthly downloads](https://img.shields.io/npm/dm/to-regex-range.svg?style=flat)](https://npmjs.org/package/to-regex-range) [![NPM total downloads](https://img.shields.io/npm/dt/to-regex-range.svg?style=flat)](https://npmjs.org/package/to-regex-range) [![Linux Build Status](https://img.shields.io/travis/micromatch/to-regex-range.svg?style=flat&amp;label=Travis)](https://travis-ci.org/micromatch/to-regex-range)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/toidentifier">toidentifier</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/toidentifier/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/toidentifier/README.html">toidentifier</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/universalify">universalify</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/universalify/README.html">universalify</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/unpipe">unpipe</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/unpipe/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/unpipe/README.html">unpipe</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/utils-merge">utils-merge</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/utils-merge/README.html">utils-merge</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/uuid">uuid</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/uuid/CHANGELOG.html">Changelog</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/uuid/CONTRIBUTING.html">Contributing</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/uuid/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/uuid/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/vary">vary</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/vary/HISTORY.html">HISTORY</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/vary/README.html">vary</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/websocket-driver">websocket-driver</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/websocket-driver/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/websocket-driver/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/websocket-driver/README.html">websocket-driver [![Build Status](https://travis-ci.org/faye/websocket-driver-node.svg)](https://travis-ci.org/faye/websocket-driver-node)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/websocket-extensions">websocket-extensions</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/websocket-extensions/CHANGELOG.html">CHANGELOG</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/websocket-extensions/lib">lib</a>
+                
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/websocket-extensions/lib/pipeline">pipeline</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/websocket-extensions/lib/pipeline/README.html">Extension pipelining</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/websocket-extensions/LICENSE.html">LICENSE</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/websocket-extensions/README.html">websocket-extensions [![Build status](https://secure.travis-ci.org/faye/websocket-extensions-node.svg)](http://travis-ci.org/faye/websocket-extensions-node)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/wrap-ansi">wrap-ansi</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/wrap-ansi/readme.html">wrap-ansi [![Build Status](https://travis-ci.com/chalk/wrap-ansi.svg?branch=master)](https://travis-ci.com/chalk/wrap-ansi) [![Coverage Status](https://coveralls.io/repos/github/chalk/wrap-ansi/badge.svg?branch=master)](https://coveralls.io/github/chalk/wrap-ansi?branch=master)</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/xtend">xtend</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/xtend/README.html">xtend</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/y18n">y18n</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/y18n/CHANGELOG.html">Change Log</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/y18n/README.html">y18n</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/yargs">yargs</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/yargs/README.html">README</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="node_modules/yargs-parser">yargs-parser</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/yargs-parser/CHANGELOG.html">Changelog</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="node_modules/yargs-parser/README.html">yargs-parser</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="prerelease-versions.html">Pre-release Versions</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <div class="folder">
+                
+                <a class="name entry" href="release-notes">Release Notes</a>
+                
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="release-notes/v2.31.0.html">v2.31.0</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="release-notes/v2.0.0.html">v2.0.0</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="release-notes/index.html">Release Notes</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="telemetry.html">Telemetry</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="variable-substitutions.html">Variable Substitutions</a>
+            
+            
+                </div>
+                
+                <div class="children">
+                    
+            
+            <a class="entry" href="contributing.html">Contributing</a>
+            
+            
+                </div>
+                
+            </div>
+            
+            
+
+            
+        </div>
+        <div id="content">
+            <a href="#how-devices-are-discovered-tracked-and-refreshed"><h1 id="how-devices-are-discovered-tracked-and-refreshed">How Devices Are Discovered, Tracked, and Refreshed</h1></a><p>This document describes how the extension finds Roku devices on your network, keeps track of which ones are still reachable, and decides when to refresh that information. It serves two audiences:</p>
+<ul>
+<li><strong>The team building the extension</strong> — as the design spec for the device-management system.</li>
+<li><strong>Users of the extension</strong> — to explain <em>why</em> devices appear, disappear, or take a moment to show up, so the behavior feels intentional rather than mysterious.</li>
+</ul>
+<p>There are two kinds of devices: <strong>configured devices</strong> added by the user in settings, and <strong>discovered devices</strong> found automatically via SSDP broadcasts on the local network. Both flow through the same machinery described below.</p>
+<hr>
+<a href="#why-it39s-built-this-way"><h2 id="why-it39s-built-this-way">Why it&#39;s built this way</h2></a><p>A naive implementation would constantly broadcast on the network and constantly hit every device with <code>device-info</code> calls to keep its list accurate. That works, but it&#39;s expensive in ways that matter:</p>
+<ul>
+<li><strong>SSDP broadcasts are noisy.</strong> They touch every device on the local network, not just Rokus. Doing them on a tight interval is wasteful and unfriendly to everything else sharing the network — especially on corporate or shared Wi-Fi.</li>
+<li><strong><code>device-info</code> calls are noisy too.</strong> Each one is an HTTP request to a Roku. Doing them constantly, for every known device, every few seconds, eats bandwidth and CPU on devices that may already be doing something else (running an app, streaming, being developed against).</li>
+<li><strong>Most of the time, nothing has changed.</strong> A device the user saw five minutes ago is almost certainly still there at the same IP. Re-asking constantly is busywork.</li>
+</ul>
+<p>So the system is built around three principles:</p>
+<ol>
+<li><strong>On demand, not on a schedule.</strong> Work happens when the user is actually looking — when a view opens, when they click refresh, when they expand a tree node. If no UI is visible, no network traffic happens. Orders queue up and run the next time a view appears.</li>
+<li><strong>Cache first, refresh in the background.</strong> When the UI asks for a device, we return whatever we have immediately — even if it&#39;s stale, even if it&#39;s just <code>{ip, serial}</code> from an SSDP packet. Fresh data is fetched in the background and pushed to the view when it arrives. The user is never blocked waiting on a network call.</li>
+<li><strong>Occasional sync to catch drift.</strong> A few well-chosen triggers (startup, wake from sleep, network change, user-initiated refresh) reconcile the cache against reality. Between those, we trust the cache.</li>
+</ol>
+<p>The result: most of the time, your devices are <em>just there</em> with no network chatter. When something significant happens — you change networks, you wake your laptop, you click refresh — the system does a focused burst of work and then goes quiet again.</p>
+<hr>
+<a href="#big-picture"><h2 id="big-picture">Big picture</h2></a><p>Three moving parts:</p>
+<ol>
+<li><strong><a href="#orders">Orders</a></strong> — units of work the system wants done. Two kinds: <code>broadcast</code> (find new devices) and <code>reconcile</code> (verify known ones).</li>
+<li><strong><a href="#views">Views</a></strong> — the UI surfaces (quick pick, tree view). Views are the <em>gate</em>: orders only run while a view is visible, otherwise they queue.</li>
+<li><strong><a href="#data-freshness">The cache</a></strong> — when someone asks for devices, we return the cached copies immediately and refresh them in the background.</li>
+</ol>
+<p>The rest of this doc explains <a href="#when-are-orders-submitted">when orders get submitted</a>, <a href="#entry-points">what triggers them</a>, and <a href="#views">how each view behaves</a>.</p>
+<hr>
+<a href="#orders"><h2 id="orders">Orders</h2></a><p>The system runs on <strong>orders</strong>. Anything that wants work done submits an order. Orders only execute when a view is actually visible. If no view is open, the order is queued and runs the next time a view appears.</p>
+<p>Two kinds:</p>
+<ul>
+<li><strong><code>broadcast</code></strong> — send an SSDP <code>M-SEARCH</code> to find devices on the network</li>
+<li><strong><code>reconcile</code></strong> — health-check every known device, drop the ones that don&#39;t respond</li>
+</ul>
+<p>Views are the consumers. They monitor for orders and fulfill them on open / while visible.</p>
+<hr>
+<a href="#when-are-orders-submitted"><h2 id="when-are-orders-submitted">When are orders submitted?</h2></a><a href="#broadcast-orders"><h3 id="broadcast-orders"><code>broadcast</code> orders</h3></a><p>A broadcast order sends an SSDP <code>M-SEARCH</code> request out to the local network (targeting <code>roku:ecp</code>) and listens for replies. Devices that respond are folded into the list (new ones get added, existing ones get re-confirmed).</p>
+<p>This is the <em>active</em> side of SSDP. The extension also continuously listens <em>passively</em> for unsolicited announcements (see below) — those don&#39;t require an order.</p>
+<p>Submitted when:</p>
+<ul>
+<li>startup (<code>reason: &#39;startup&#39;</code>)</li>
+<li>network changed (<code>reason: &#39;network&#39;</code>)</li>
+<li>wake from sleep (<code>reason: &#39;sleep&#39;</code>)</li>
+<li>user clicks refresh in the UI (<code>reason: &#39;refresh-clicked&#39;</code>)</li>
+<li>a discovered device fails a health check, outside the current broadcast flow (<code>reason: &#39;unhealthy-device&#39;</code>)</li>
+<li>quick pick has been open 7s without a broadcast happening (<code>reason: &#39;stale&#39;</code>)</li>
+<li>&quot;it&#39;s been a while&quot; timer fires (<code>reason: &#39;stale&#39;</code>)</li>
+</ul>
+<p>Emit shape:</p>
+<pre><code class="language-ts">this.emitEvent(&#39;broadcast-ordered&#39;, {
+  reason: &#39;startup&#39; | &#39;network&#39; | &#39;sleep&#39; | &#39;refresh-clicked&#39; | &#39;unhealthy-device&#39; | &#39;stale&#39;
+})
+</code></pre>
+<p>Every emission carries a reason. Views decide which reasons they want to act on — see <a href="#views">Views</a> below.</p>
+<a href="#reconcile-orders"><h3 id="reconcile-orders"><code>reconcile</code> orders</h3></a><p>A reconcile order health-checks every known device. Devices that don&#39;t respond change state:</p>
+<ul>
+<li><strong>discovered devices</strong> are removed from the list (we have no reason to keep them around)</li>
+<li><strong>configured devices</strong> stay in the list but are marked <code>offline</code> (the user told us they exist; we just can&#39;t reach them right now)</li>
+</ul>
+<p>Submitted when:</p>
+<ul>
+<li>startup (<code>reason: &#39;startup&#39;</code>)</li>
+<li>network changed (<code>reason: &#39;network&#39;</code>)</li>
+<li>wake from sleep (<code>reason: &#39;sleep&#39;</code>)</li>
+<li>user clicks refresh in the UI (<code>reason: &#39;refresh-clicked&#39;</code>)</li>
+<li>configured device changed (<code>reason: &#39;config-changed&#39;</code>)</li>
+<li>5-minute timer fires (<code>reason: &#39;stale&#39;</code>)</li>
+</ul>
+<p>Emit shape:</p>
+<pre><code class="language-ts">this.emitEvent(&#39;reconcile-ordered&#39;, {
+  reason: &#39;startup&#39; | &#39;network&#39; | &#39;sleep&#39; | &#39;refresh-clicked&#39; | &#39;config-changed&#39; | &#39;stale&#39;
+})
+</code></pre>
+<p>Same as broadcast: every emission carries a reason and views opt in.</p>
+<hr>
+<a href="#when-do-we-health-check-a-single-device"><h2 id="when-do-we-health-check-a-single-device">When do we health-check a single device?</h2></a><p>Separate from reconcile orders (which sweep <em>all</em> devices), individual devices get health-checked in a few specific situations:</p>
+<ul>
+<li><strong>A device responds to an <code>M-SEARCH</code></strong> — broadcasts only run while a view is visible, so we know someone&#39;s looking. Hydrate it immediately.</li>
+<li><strong>The user clicks / expands a device in a view</strong> — explicit engagement with that specific device.</li>
+<li><strong>A view asks for a device that has no cached <code>deviceInfo</code></strong> — see below.</li>
+</ul>
+<a href="#clicking-refresh"><h3 id="clicking-refresh">Clicking refresh</h3></a><p>Clicking <strong>refresh</strong> in a view is an explicit &quot;I want fresh data now&quot; signal. It always submits a <code>broadcast</code> order and a <code>reconcile</code> order, regardless of how recently either ran.</p>
+<a href="#lazy-hydration-on-read"><h3 id="lazy-hydration-on-read">Lazy hydration on read</h3></a><p>This is the catch-all that handles <code>ssdp:alive</code> (and any other case where a device ends up in the list without fresh <code>deviceInfo</code>).</p>
+<p>When a view calls <code>.getAllDevices()</code> (or asks for a single device):</p>
+<ol>
+<li>We return immediately with whatever we have. Devices without cached <code>deviceInfo</code> come back as the bare entry — <code>{ip, serial}</code> only, state <code>unknown</code>.</li>
+<li>In the background, we queue a device-info call for any device matching either condition:<ul>
+<li>state <code>unknown</code> AND no cached <code>deviceInfo</code>, or</li>
+<li>cached <code>deviceInfo</code> is older than <strong>8 hours</strong> (regardless of state)</li>
+</ul>
+</li>
+<li>As each call returns, the device transitions out of <code>unknown</code> (or just refreshes its cache, if it was already <code>online</code>/<code>offline</code>):<ul>
+<li>success → <code>online</code>, cache updated</li>
+<li>failure → discovered devices are removed; configured devices become <code>offline</code></li>
+</ul>
+</li>
+<li>Emit <code>devices-changed</code>. Subscribed views re-read and re-render with the fresh data.</li>
+</ol>
+<p>The view never blocks on a network call. Devices appear instantly (even if minimal or stale), and fill in as data arrives.</p>
+<p>This is what makes <code>ssdp:alive</code> &quot;just work&quot; — when an announcement arrives, the device is added in state <code>unknown</code>. Nothing happens to it until a view actually reads the list. If a view <em>is</em> open, that read triggers the lazy hydration and the device fills in. If no view is open, the device sits in the list cheaply until something asks for it.</p>
+<hr>
+<a href="#entry-points"><h2 id="entry-points">Entry points</h2></a><a href="#passive-ssdp-announcements"><h3 id="passive-ssdp-announcements">Passive SSDP announcements</h3></a><p>Independent of broadcast orders, the extension always listens for unsolicited SSDP messages from Roku devices on the network:</p>
+<ul>
+<li><strong><code>ssdp:alive</code></strong> — a Roku is announcing itself.<ul>
+<li>Add it to the list as <code>{ip, serial}</code> in state <code>unknown</code></li>
+<li>Emit <code>device-list-changed</code></li>
+<li>We do <em>not</em> device-info it eagerly. If a view is open and reads the list, <a href="#lazy-hydration-on-read">lazy hydration</a> fills it in. If no view is open, it sits in the list cheaply until something asks for it.</li>
+</ul>
+</li>
+<li><strong><code>ssdp:byebye</code></strong> — a Roku is going offline.<ul>
+<li>Discovered devices are removed immediately (no health check needed — the device just said so itself)</li>
+<li>Configured devices are marked <code>offline</code> but stay in the list</li>
+<li>Emit <code>device-list-changed</code></li>
+</ul>
+</li>
+</ul>
+<p>This is how devices that power on or off <em>while a view is already open</em> show up or disappear without waiting for the next broadcast.</p>
+<a href="#startup"><h3 id="startup">Startup</h3></a><ul>
+<li>Load configured devices</li>
+<li>Load last-seen discovered devices from cache</li>
+<li>Submit <code>broadcast</code> + <code>reconcile</code> orders (queued if no view visible)</li>
+</ul>
+<a href="#wake-from-sleep"><h3 id="wake-from-sleep">Wake from sleep</h3></a><ul>
+<li>Submit <code>broadcast</code> + <code>reconcile</code> orders (queued if no view visible)</li>
+</ul>
+<p>We detect sleep by watching for a long gap in a low-frequency timer: if the timer fires significantly later than expected, the machine was almost certainly asleep. This runs regardless of whether VS Code has focus, so a wake is noticed even if the editor was in the background.</p>
+<a href="#network-change"><h3 id="network-change">Network change</h3></a><ul>
+<li>Append cached &quot;last seen discovered devices&quot; for the new network into <code>discoveredDevices</code></li>
+<li>Submit <code>broadcast</code> + <code>reconcile</code> orders (queued if no view visible)</li>
+<li>Devices that no longer respond fall off when the reconcile runs</li>
+</ul>
+<p>We detect network changes by periodically checking the machine&#39;s network interfaces and noticing when the set of addresses changes (new Wi-Fi, plugged in Ethernet, VPN up/down). To stay quiet while the user isn&#39;t actively using the editor, this check pauses when VS Code loses focus and resumes when it gains focus again — so a network change you make on a different app gets picked up the moment you come back.</p>
+<a href="#user-clicks-refresh"><h3 id="user-clicks-refresh">User clicks refresh</h3></a><ul>
+<li>Submits a <code>broadcast</code> order and a <code>reconcile</code> order</li>
+<li>Discovered devices that don&#39;t respond are dropped by the reconcile</li>
+<li>New devices found by the broadcast are immediately device-info&#39;d</li>
+</ul>
+<hr>
+<a href="#de-dupe-rule"><h2 id="de-dupe-rule">De-dupe rule</h2></a><p>Within a single refresh flow, a device only gets device-info&#39;d once — first one in wins. (Prevents the broadcast response and the reconcile from racing each other on the same device.)</p>
+<hr>
+<a href="#views"><h2 id="views">Views</h2></a><p>Views are the gate that lets orders run. They also submit their own orders based on interaction.</p>
+<p>Each view declares which reasons it cares about — separately for orders queued while the view was closed (consumed on open) and live events fired while the view is visible. The general rule of thumb: <code>stale</code> is treated cautiously — a clock-driven &quot;things might be old&quot; signal shouldn&#39;t make a view that&#39;s been quietly sitting there suddenly hammer the network.</p>
+<a href="#quick-pick"><h3 id="quick-pick">Quick pick</h3></a><ul>
+<li>On open: fulfills pending <code>broadcast</code> orders and pending <code>reconcile</code> orders for <strong>any reason except <code>stale</code></strong></li>
+<li>While visible: fulfills <code>broadcast</code> and <code>reconcile</code> events for <strong>any reason except <code>stale</code></strong></li>
+<li>If open &gt;7s without a broadcast: submits one</li>
+<li>Clicking an item: health-checks that one device</li>
+<li>Calls <code>.getDevices()</code>; re-calls on <code>device-list-changed</code></li>
+</ul>
+<a href="#tree-view"><h3 id="tree-view">Tree view</h3></a><ul>
+<li>On open: fulfills pending <code>broadcast</code> AND <code>reconcile</code> orders for <strong>any reason</strong></li>
+<li>While visible: fulfills <code>broadcast</code> and <code>reconcile</code> events for <strong>any reason except <code>stale</code></strong></li>
+<li>Expanding an item: health-checks that device</li>
+<li>Calls <code>.getDeviceList()</code>; re-calls on <code>device-list-changed</code></li>
+</ul>
+<hr>
+<a href="#data-freshness"><h2 id="data-freshness">Data freshness</h2></a><p>Whatever info we have, we&#39;ll give you. If a device has only been seen via SSDP, you get <code>{ip, serial}</code>. If it&#39;s been device-info&#39;d before, you get the full cached payload. Either way, you get it immediately — no waiting on a network call.</p>
+<p>In the background, we refresh stale entries and push updates as fresh data arrives. The view&#39;s job is to display what it has now and re-render when an update comes in. See <a href="#lazy-hydration-on-read">Lazy hydration on read</a> for the exact mechanism.</p>
+<hr>
+<a href="#device-states"><h2 id="device-states">Device states</h2></a><p>Every device in the list is in one of four states:</p>
+<ul>
+<li><strong><code>unknown</code></strong> — the device has been added to the list but we haven&#39;t tried to talk to it yet. This is the entry state for everything: cache restored at startup, configured device just loaded, <code>ssdp:alive</code> just received.</li>
+<li><strong><code>pending</code></strong> — a health check is currently in flight against this device. Transient state — it exits as soon as the health check returns.</li>
+<li><strong><code>online</code></strong> — last health check succeeded. The device is reachable and ready to use.</li>
+<li><strong><code>offline</code></strong> — last health check failed. Only configured devices reach this state; discovered devices that fail are removed entirely.</li>
+</ul>
+<p>The lifecycle is <code>unknown</code> → <code>pending</code> (when a health check starts) → <code>online</code> or <code>offline</code> (when it finishes). Devices can re-enter <code>pending</code> any time a fresh health check fires.</p>
+<p>Views can use these states to show the user what&#39;s going on (e.g. greyed-out for <code>unknown</code>, spinner for <code>pending</code>, normal for <code>online</code>, dimmed/warning for <code>offline</code>).</p>
+<hr>
+<a href="#network-scoped-cache"><h2 id="network-scoped-cache">Network-scoped cache</h2></a><p>The cache of seen devices is <strong>scoped to the current network</strong>. When you change networks (different Wi-Fi, plug into Ethernet, connect to VPN), the system loads the device list for <em>that</em> network and stashes the previous one.</p>
+<p>The cache also <strong>persists across VS Code restarts</strong>. When the extension starts up, devices seen on the current network in previous sessions are loaded immediately as <code>unknown</code>, so the UI has something to show before any network traffic happens.</p>
+<p>In practice:</p>
+<ul>
+<li>Devices from your home network don&#39;t appear when you&#39;re on the office network.</li>
+<li>Switching back to a previous network instantly restores its devices (as <code>unknown</code>, then health-checked).</li>
+<li>Reopening VS Code on a network you&#39;ve used before shows the same devices right away.</li>
+<li>This is why the network-change entry point is important — it&#39;s not just &quot;scan again,&quot; it&#39;s &quot;swap the active list.&quot;</li>
+</ul>
+<hr>
+<a href="#disabling-discovery"><h2 id="disabling-discovery">Disabling discovery</h2></a><p>Users can turn the whole automatic-discovery system off in settings. When discovery is disabled:</p>
+<ul>
+<li>No SSDP broadcasts are sent.</li>
+<li>The passive listener for <code>ssdp:alive</code> / <code>ssdp:byebye</code> stops.</li>
+<li>Network-change and sleep-wake monitoring stop.</li>
+<li>The &quot;device online&quot; popup no longer appears</li>
+<li>Only <strong>configured devices</strong> appear in the UI.</li>
+</ul>
+<p>This is the escape hatch for users on locked-down networks, users who only use a single fixed IP, or anyone who doesn&#39;t want the extension making <em>any</em> network calls it doesn&#39;t have to.</p>
+            <div id="footer"></div>
+        </div>
+    </div>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
